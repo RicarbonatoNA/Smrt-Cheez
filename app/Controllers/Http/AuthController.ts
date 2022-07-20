@@ -15,13 +15,12 @@ export default class AuthController {
     }
 
     public async register({response, request}:HttpContextContract){
-        try{
+        //try{
             const user = request.all()
             await User.create(user)
-            response.ok ({mensaje:'se registró correctamente', estado:true})
-        }
-        catch{
-            response.badRequest({mensaje:'Hubo un error', estado:false})
-        }
+            //response.ok ({mensaje:'se registró correctamente', estado:true})
+        //} catch{
+            //response.badRequest({mensaje:'Hubo un error', estado:false})
+        //}
     }
 }
